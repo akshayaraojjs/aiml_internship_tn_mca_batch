@@ -1,0 +1,88 @@
+Different Types of Functions in Python
+
+1. User-defined functions
+2. Function with parameters
+3. Function with return
+4. `*args` (variable-length positional arguments)
+5. `kwargs` (variable-length keyword arguments)
+6. Default arguments
+7. Keyword arguments
+
+1. User-defined Function (No Parameters)
+
+def greet():
+    print("Hello, welcome to Python functions!")
+
+greet()
+
+2. Function with Parameters
+
+def add(a, b):
+    print("Sum:", a + b)
+
+add(10, 5)
+
+3. Function with Return Statement
+
+def multiply(a, b):
+    return a * b
+
+result = multiply(4, 5)
+print("Result:", result)
+
+4. `*args` – Variable Number of Positional Arguments
+
+def total_marks(*marks):
+    print("All marks:", marks)
+    print("Total:", sum(marks))
+
+total_marks(85, 90, 75, 88)
+
+Output:
+
+All marks: (85, 90, 75, 88)
+Total: 338
+
+5. `kwargs` – Variable Number of Keyword Arguments
+
+def student_info(details):
+    for key, value in details.items():
+        print(f"{key}: {value}")
+
+student_info(name="Akshay", age=21, branch="CSE")
+
+Output:
+
+name: Akshay
+age: 21
+branch: CSE
+
+6. Default Arguments
+
+def greet(name="User"):
+    print(f"Hello, {name}!")
+
+greet()
+greet("Akshay")
+
+Output:
+
+Hello, User!
+Hello, Akshay!
+
+7. Keyword Arguments
+
+def profile(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+profile(age=20, name="Aarav")
+
+Output:
+
+Name: Aarav, Age: 20
+
+Summary of `*args` and `kwargs`:
+
+| Syntax     | Purpose                               | Example Call             |
+| `*args`    | Accepts variable positional arguments | `func(1, 2, 3)`          |
+| `kwargs`   | Accepts variable keyword arguments      | `func(name="A", age=20)` |
